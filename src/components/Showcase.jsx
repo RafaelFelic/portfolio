@@ -1,4 +1,4 @@
-import useTextAnimation from "../utils/textAnimation";
+import useTextAnimation from '../utils/textAnimation';
 
 export default function Showcase() {
   const sectionRef = useTextAnimation();
@@ -12,7 +12,7 @@ export default function Showcase() {
         <div>
           <p className="hide fromleft mb-3 md:mb-8">Welcome!</p>
           <p className="hide fromleft mb-2 md:mb-3">
-            I am{" "}
+            I am{' '}
             <span className="text-[#4169E1] text-3xl md:text-4xl lg:text-5xl">
               Rafael Feliciano
             </span>

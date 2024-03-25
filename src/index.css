@@ -80,3 +80,10 @@ body {
 .textShadow {
   text-shadow: 3px 3px 3px #000;
 }
+
+@media only screen and (max-width: 950px) and (orientation: landscape) {
+  .landscape {
+    font-size: 0.9rem;
+    line-height: 0.9rem;
+  }
+}
