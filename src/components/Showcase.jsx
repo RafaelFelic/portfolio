@@ -8,7 +8,7 @@ export default function Showcase() {
       ref={sectionRef}
       className="h-screen flex flex-col justify-evenly xl:p-12 items-center md:flex-row"
     >
-      <section className="block md:inline-block md:m-auto mr-5 md:ml-12 w-full md:w-[60%] text-2xl md:text-3xl lg:text-4xl text-right md:text-left font-semibold">
+      <section className="block md:inline-block md:m-auto mr-5 md:ml-12 w-full md:w-[60%] text-2xl md:text-3xl lg:text-4xl text-right md:text-left font-semibold landscape">
         <div>
           <p className="hide fromleft mb-3 md:mb-8">Welcome!</p>
           <p className="hide fromleft mb-2 md:mb-3">
@@ -26,7 +26,7 @@ export default function Showcase() {
         </div>
       </section>
 
-      <section className="w-[85%] md:w-[40%] md:mr-12 text-base lg:text-lg bg-[#95AADD] rounded-3xl text-black p-2.5 shadow-[20px_20px_0px_2px_#000] hide fromright landscape">
+      <section className="w-[85%] md:w-[40%] md:mr-12 text-base lg:text-lg bg-[#95AADD] rounded-3xl text-black p-2.5 shadow-[20px_20px_0px_2px_#000] hide fromright">
         <div className="p-2.5 skills">
           <p className="text-2xl md:text-3xl md:mb-6 ">skills &#123;</p>
           <p className="mb-5">

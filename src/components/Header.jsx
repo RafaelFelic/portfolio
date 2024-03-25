@@ -1,7 +1,7 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { HEADER_ITEMS, SOCIAL_LINKS } from '../utils/data';
-import { scrollToSection } from '../utils/scroll';
+import React, { useState, useEffect, useRef } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { HEADER_ITEMS, SOCIAL_LINKS } from "../utils/data";
+import { scrollToSection } from "../utils/scroll";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,9 +14,9 @@ export default function Header() {
       }
     }
 
-    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [menuRef]);
 
@@ -43,7 +43,7 @@ export default function Header() {
         {/* Navigation Menu */}
         <nav
           className={`${
-            isMenuOpen ? 'block' : 'hidden'
+            isMenuOpen ? "block" : "hidden"
           } md:flex justify-center flex-grow bg-[#DAE4E9] absolute md:relative top-full left-0 md:bg-transparent rounded-br-3xl z-10`}
         >
           <ul className="flex flex-col md:flex-row w-full h-full m-1">
@@ -54,9 +54,11 @@ export default function Header() {
                     hover:bg-[#4169E1]
                     hover:shadow-[5px_5px_0px_2px_#000]
                     md:hover:shadow-[10px_10px_0px_2px_#000]
-                    hover:rounded-md                           
-                    m-3 md:m-2 p-1 md:p-2 text-left md:text-center 
-                    text-2xl lg:text-3xl xl:text-4xl"
+                    hover:rounded-md                     
+                    m-3 md:m-2 p-1 md:p-2 text-left md:text-center                   
+                    text-lg md:text-xl lg:text-2xl 
+                    xl:text-3xl
+                   "
                   onClick={() => {
                     scrollToSection(item.id);
                     setIsMenuOpen(false);

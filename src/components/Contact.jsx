@@ -1,3 +1,5 @@
+import emailjs from "emailjs-com";
+
 import React, { useState } from "react";
 import useTextAnimation from "../utils/textAnimation";
 import FormField from "./FormField";
@@ -21,13 +23,30 @@ function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(formData);
-    alert("Thank you for your message. We will get back to you soon!");
-    setFormData({
-      name: "",
-      email: "",
-      message: "",
-    });
+
+    emailjs
+      .sendForm(
+        "service_tvmo5gt",
+        "template_3l0w0b6",
+        e.target,
+        "h9YldQX1tEv9XmBIm"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          alert("Thank you for your message. We will get back to you soon!");
+          // Reset form here if you wish
+          setFormData({
+            name: "",
+            email: "",
+            message: "",
+          });
+        },
+        (error) => {
+          console.log(error.text);
+          // Handle errors here, possibly a different message or a retry mechanism
+        }
+      );
   };
 
   return (
